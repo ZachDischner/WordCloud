@@ -4,6 +4,12 @@
 //  Created by Zach Dischner on 5/1/2017
 //
 // For usage instructions, call with the --help option
+// 
+// Simplest build instructions if you have scons and a python2 environment
+//      `scons`
+// 
+// Otherwise, direct command line g++ call is simple enough
+//      `g++ -std=c++11 WordCloud.cpp -o WordCloud`             
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////// Imports //////////////////////////////////////////
@@ -41,7 +47,9 @@ using namespace std;
 #define required_argument 1 
 #define optional_argument 2
 
-const char *IGNORES[] = {"a","an","and","the","you","me","us","be","it","us","he","she","they","thy","we"};
+const char *IGNORES[] = {"a","an","am","and","the","you","me","my","us","be","it","us","he","she","him","her","his","hers",\
+                        "ye","your","so","or","is","isnt","not","mr","mrs","ms","dr","sr","they","thy","we","of","to","its",\
+                        "on","oh","if","as","by","them","our","in","for","do","dont","does","doesnt","did","at","are","did"};
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////

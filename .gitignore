@@ -1,2 +1,4 @@
 WordCloud
 .vscode/*
+.sconsign.dblite
+*.o
