@@ -5,7 +5,7 @@
 //
 // For usage instructions, call with the --help option
 // 
-// Simplest build instructions if you have scons and a python2 environment
+// Simplest build instructions if you have scons and a python2 environment (NOT 3, sadly)
 //      `scons`
 // 
 // Otherwise, direct command line g++ call is simple enough
@@ -35,7 +35,7 @@ using namespace std;
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 // Debug helper
-# define DEBUG 1
+# define DEBUG 0
 #if DEBUG > 0
 # define DEBUG_PRINT(x) printf("\n\t>>"); printf x
 #else
@@ -49,7 +49,7 @@ using namespace std;
 
 const char *IGNORES[] = {"a","an","am","and","the","you","me","my","us","be","it","us","he","she","him","her","his","hers",\
                         "ye","your","so","or","is","isnt","not","mr","mrs","ms","dr","sr","they","thy","we","of","to","its",\
-                        "on","oh","if","as","by","them","our","in","for","do","dont","does","doesnt","did","at","are","did"};
+                        "i","on","oh","if","as","by","them","our","in","for","do","dont","does","doesnt","did","at","are","did"};
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////
