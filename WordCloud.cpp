@@ -2,6 +2,11 @@
 //  WordCloud.cpp
 //
 //  Created by Zach Dischner on 5/1/2017
+// 
+//  Takes string/filename input, then gives as an output the words and count of occurances
+//  of said word in the string or parsed file input. Punctuation is removed from all words,
+//  words are all made lowercase, and are validated against some words that we know we 
+//  want to ignore from output "word cloud" statitstics. 
 //
 // For usage instructions, call with the --help option
 // 
@@ -234,7 +239,13 @@ int main (int argc, char **argv)
     }
     DEBUG_PRINT(("CL Options: mincounts = %d, maxcounts = %d, startswith = '%s', index = %d, argc = %d\n",
           mincounts, maxcounts, startswith.c_str(), option_index, argc));
-
+    
+    // Some validity checks
+    if (maxcounts < mincounts)
+    {
+        printf("--maxcounts (%d) cannot be less than --mincounts (%d)! Exiting", maxcounts, mincounts);
+        exit(1);
+    }
     if (input == "")
     {
         input = string(argv[argc-1]);

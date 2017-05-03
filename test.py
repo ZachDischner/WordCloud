@@ -7,7 +7,11 @@ against sample datasets
 
 Not intended to be a comprehensive validator, just a first step sanity check.
 
-Just run from the command line and verify that everything worked as intended.
+Just run from the command line and verify that everything worked as intended. Program will print
+out the success/failure of each test case, and will fail with assertions in non test/unittest
+execution context if anything goes wrong
+
+>> python test.py
 """
 
 ###### Imports
